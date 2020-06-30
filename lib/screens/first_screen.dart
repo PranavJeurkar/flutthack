@@ -12,15 +12,48 @@ class FirstTab extends StatelessWidget {
             child : Stack(
               children :[
                 Clock(),
+               Positioned(
+                  top: 0,
+                  right: 0,
+                  child: RaisedButton(
+                    color: Colors.deepOrange,
+                    child: Text('1'),
+                    elevation: 6.0,
+                    onPressed: () {
+                          Navigator.push(context, MaterialPageRoute(builder: (context) => SecondTab()));
+                      }),
+                ),
                 Positioned(
                   bottom: 0,
                   right: 0,
                   child: RaisedButton(
-                    color: Colors.deepOrange,
-                    child: Text('3'),
-                    elevation: 6.0,
-                    onPressed: () {
-                          Navigator.push(context, MaterialPageRoute(builder: (context) => SecondTab()));
+                      color: Colors.deepOrange,
+                      child: Text('5'),
+                      elevation: 6.0,
+                      onPressed: () {
+                        Navigator.push(context, MaterialPageRoute(builder: (context) => SecondTab()));
+                      }),
+                ),
+                Positioned(
+                  bottom: 0,
+                  left: 0,
+                  child: RaisedButton(
+                      color: Colors.deepOrange,
+                      child: Text('7'),
+                      elevation: 6.0,
+                      onPressed: () {
+                        Navigator.push(context, MaterialPageRoute(builder: (context) => SecondTab()));
+                      }),
+                ),
+                Positioned(
+                  top: 0,
+                  left: 0,
+                  child: RaisedButton(
+                      color: Colors.deepOrange,
+                      child: Text('11'),
+                      elevation: 6.0,
+                      onPressed: () {
+                        Navigator.push(context, MaterialPageRoute(builder: (context) => SecondTab()));
                       }),
                 ),
               ],
@@ -28,9 +61,8 @@ class FirstTab extends StatelessWidget {
             ),
           ),
         ),
+        ),
     );
 
-
-}
 
 }
